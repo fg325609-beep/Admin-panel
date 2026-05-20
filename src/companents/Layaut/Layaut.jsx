@@ -1,8 +1,11 @@
 import React from 'react'
+import Sidebar from '../Sidebar/Sidebar'
 
 const Layaut = () => {
   return (
-    <div>Layaut</div>
+    <div>
+        
+    </div>
   )
 }
 
