@@ -1,0 +1,59 @@
+// Layout.scss
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #0a0c10;
+  font-family: 'Inter', system-ui, sans-serif;
+
+  // Sidebar qismi (chap)
+  .sidebar-container {
+    width: 280px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+  }
+
+  // Asosiy kontent (o‘ng)
+  .admin-content {
+    flex: 1;
+    overflow-x: auto;
+    padding: 1.5rem;
+    transition: padding 0.3s ease;
+  }
+
+  // Kichik ekranlar (tablet va mobil)
+  @media (max-width: 768px) {
+    .sidebar-container {
+      width: 240px;
+    }
+    .admin-content {
+      padding: 1rem;
+    }
+  }
+
+  // 300px gacha – sidebar to‘liq kenglikda yuqoriga chiqadi,
+  // yoki siz xohlasangiz, toggle menyu qilish mumkin.
+  // Bu yerda sidebar va content ustun bo‘lib ketmasligi uchun:
+  @media (max-width: 600px) {
+    flex-direction: column;
+    .sidebar-container {
+      width: 100%;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .admin-content {
+      padding: 0.8rem;
+    }
+  }
+
+  // Agar siz 300px da ham yonma-yon qolishini istasangiz (kichik bo‘lsa ham):
+  // max-width: 300px bo‘lganda sidebar juda torayadi, lekin yonma-yon qoladi.
+  @media (max-width: 300px) {
+    .sidebar-container {
+      width: 100px; // minimal kenglik
+    }
+    .admin-content {
+      padding: 0.5rem;
+    }
+  }
+}
