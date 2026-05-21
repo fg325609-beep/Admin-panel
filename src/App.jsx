@@ -7,10 +7,9 @@ import Teacher from './pages/TeachersPages/TeachersPages' // Komponent nomi Teac
 
 const App = () => {
   return (
-    <div style={{ display: 'flex' }}> {/* Sidebar yonma-yon turishi uchun flex beramiz */}
+    <> 
       <BrowserRouter>
         
-        {/* Sidebar hamma sahifada doim ko'rinib turishi uchun Routes dan tashqarida bo'lishi shart */}
         <Sidebar />
 
         {/* Asosiy kontent qismi */}
@@ -24,7 +23,7 @@ const App = () => {
         </div>
 
       </BrowserRouter>
-    </div>
+    </>
   )
 }
 
